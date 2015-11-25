@@ -5,7 +5,7 @@ package nl.cam.workflow
  */
 
 stage 'Build'
-node('npm') {
+node {
     sh 'npm install'
 }
 
