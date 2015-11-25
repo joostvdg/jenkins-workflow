@@ -10,8 +10,8 @@ node {
     unstash 'flowFiles'
     pwd()
     sh 'ls -lath'
-    steps = load 'src/main/groovy/nl/cam/workflow/common/Steps.groovy'
+    load 'src/main/groovy/nl/cam/workflow/common/Steps.groovy'
 }
 
 // Execute the required steps
-steps.npmBuild()
+npmBuild()
