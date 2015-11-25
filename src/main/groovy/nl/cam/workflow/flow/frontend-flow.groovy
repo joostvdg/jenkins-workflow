@@ -6,6 +6,10 @@ package nl.cam.workflow.flow
 
 stage 'Load common flow scripts'
 node {
+    pwd()
+    unstash 'flowFiles'
+    pwd()
+    sh 'ls -lath'
     steps = load 'src/main/groovy/nl/cam/workflow/common/Steps.groovy'
 }
 
