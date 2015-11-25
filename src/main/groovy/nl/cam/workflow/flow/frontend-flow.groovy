@@ -5,7 +5,6 @@ package nl.cam.workflow.flow
  */
 
 
-evaluate(new File("../common/Steps.groovy"))
-
+load '../common/Steps.groovy'
 
 npmBuild()
