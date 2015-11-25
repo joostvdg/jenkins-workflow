@@ -6,6 +6,7 @@ package nl.cam.workflow.flow
 
 
 stage 'Load common flow scripts'
+def steps
 node {
     pwd()
     unstash 'flowFiles'
@@ -14,3 +15,5 @@ node {
 
 // Execute the required steps
 steps.npmBuild()
+
+return this;
