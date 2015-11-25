@@ -5,6 +5,7 @@ package nl.cam.workflow.flow
  */
 
 
-load 'src/main/groovy/nl/cam/workflow/common/Steps.groovy'
+steps = load 'src/main/groovy/nl/cam/workflow/common/Steps.groovy'
 
-npmBuild()
+// Execute the required steps
+steps.npmBuild()
