@@ -9,7 +9,3 @@ node('npm') {
     sh 'npm install'
 }
 
-stage 'Sonar'
-node {
-    step <object of type hudson.plugins.sonar.SonarRunnerBuilder>
-}
