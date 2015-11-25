@@ -9,7 +9,12 @@ def npmBuild() {
     stage 'Build'
     node {
         sh 'ls -lath'
-        sh 'npm install'
+        unstash 'componentFiles'
+        sh 'ls -lath'
+        dir('component') {
+            sh 'ls -lath'
+            sh 'npm install'
+        }
     }
 }
 return this;
